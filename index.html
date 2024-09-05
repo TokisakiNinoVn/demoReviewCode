@@ -3,11 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Button Change Color</title>
+    <style>
+        /* Đặt màu mặc định cho nút */
+        #colorButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <h1>Demo code của Thùy Dung </h1>
+<h1>Demo code của Thùy Dung </h1>
 
     <h1>Nino code</h1>
+    <!-- Tạo nút với id là colorButton -->
+    <button id="colorButton" onclick="changeColor()">Click to Change Color</button>
+
+    <script>
+        // Hàm JavaScript để đổi màu khi nhấp vào nút
+        function changeColor() {
+            // Lấy tham chiếu đến nút thông qua id
+            var button = document.getElementById('colorButton');
+            
+            // Kiểm tra màu hiện tại của nút và thay đổi sang màu khác
+            if (button.style.backgroundColor === 'blue') {
+                button.style.backgroundColor = 'green';  // Đổi sang màu xanh lá cây
+            } else {
+                button.style.backgroundColor = 'blue';   // Đổi lại sang màu xanh dương
+            }
+        }
+    </script>
 </body>
 </html>
